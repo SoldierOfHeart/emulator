@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="images/rsb.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/rsb.ico" type="image/x-icon" />
+    <title>Обработка платежа</title>
+    <!--<title>ECOMM default ok post template to merchant</title>-->
+    <script type="text/javascript" language="javascript">
+        function moveWindow() {
+            document.returnform.submit();
+        }
+    </script>
+</head>
+<body onLoad="javascript:moveWindow()">
+<form name="returnform" action="" method="POST">
+    <input type="hidden" name="trans_id" value="{{ trans_id }}=">
+    <input type="hidden" name="Ucaf_Cardholder_Confirm" value="{{ Ucaf_Cardholder_Confirm }}">
+
+    <!-- To support javascript unaware/disabled browsers -->
+    <noscript>
+        <center>Please click the submit button below.<br>
+            <input type="submit" name="submit" value="Submit"></center>
+    </noscript>
+</form>
+
+</body>
+</html>
